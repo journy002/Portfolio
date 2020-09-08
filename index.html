@@ -41,7 +41,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
+    <section id="about" class="section section_container">
         <h1>About me</h1>
         <p>
             (내가 원하는 내용 적기)
@@ -93,63 +93,73 @@
 
     <!-- Skills -->
     <section id="skills" class="section">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-            Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable
-            working within a team environment and independently. Ability to plan and time schedule, work under strict
-            time pressure and adapt quickly when needed.
-        </p>
-        <!-- 컨테이너 부분 -->
-        <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset__title">Skills</h3>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>HTML</span>
-                        <span>99%</span>
+        <div class="section_container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>
+                Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable
+                working within a team environment and independently. Ability to plan and time schedule, work under
+                strict
+                time pressure and adapt quickly when needed.
+            </p>
+            <!-- 컨테이너 부분 -->
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill_description">
+                            <span>HTML</span>
+                            <span>97%</span>
+                        </div>
+                        <!-- skill_bar를 기준 skill__value와 함께 %바를 만든다. 
+                            css .skill__value에 width: %를 넣어주면 오렌지색바가 생기지만
+                            결국 모든 요소에 똑같은 값이 적용된다.. 그렇기에 css에서 width를 설정하지 않고
+                             html 태그에서 정의 되어져야 한다.
+                            그리고 나중에 이런 데이터들은 따로 추출해서 json에서 관리하고 제이슨에서 동적으로 받아오고
+                            이런 데이터를 html 코드로 변환해서 자동적으로 생성을 할 것이다.-->
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 97%;"></div>
+                        </div>
                     </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                    <div class="skill">
+                        <div class="skill_description">
+                            <span>CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill_description">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>CSS</span>
-                        <span>99%</span>
+
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>IntelliJ</span></li>
+                            <li><span>Android Studio Code</span></li>
+                            <li><span>iOS development tools</span></li>
+                            <li><span>Sketch app</span></li>
+                        </ul>
                     </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Git</span></li>
+                            <li><span>Scrum master</span></li>
+                            <li><span>Chinese</span></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>JavaScript</span>
-                        <span>99%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>Visual Studio Code</span></li>
-                        <li><span>IntelliJ</span></li>
-                        <li><span>Android Studio Code</span></li>
-                        <li><span>iOS development tools</span></li>
-                        <li><span>Sketch app</span></li>
-                    </ul>
-                </div>
-                <div class="etc">
-                    <h3 class="skillset__title">Etc</h3>
-                    <ul class="etc__list">
-                        <li><span>Git</span></li>
-                        <li><span>Scrum master</span></li>
-                        <li><span>Chinese</span></li>
-                    </ul>
                 </div>
             </div>
         </div>
