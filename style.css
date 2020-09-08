@@ -105,7 +105,7 @@ h3{
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
 }
-
+/* 상단바 마들때 같이 쓰이는 코드 */
 #navbar.navbar--dark{
     background-color: var(--color-dark-grey);
     padding: 8px;
