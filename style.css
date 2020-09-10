@@ -477,10 +477,32 @@ h3{
     color: yellowgreen;
 }
 
+/* Arrow btn */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: var(--font-medium);
+    background-color: yellowgreen;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 @media screen and (max-width: 768px){
  
     .navbar__toggle-btn {
         display: block;
+        top: 15px;
     }
 
     #navbar {
