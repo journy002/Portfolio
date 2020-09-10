@@ -53,12 +53,46 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+// Project를 눌렀을때 그것만 보여주는 기능
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+
+
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300)
+    // 위에 forEach(project)는
+    // let project;
+    // for(let i = 0; i < projects.length; i++) {
+    //     project = projects[i];
+    // }
+    // 와 같은 의미 같은 코드임.
+
+    console.log(filter);
+});
+
+
 // 중복되는 스크롤 코드가 있기에 스크롤 함수를 하나 만들었다.
 // (selector)를 넣어주면 scrollIntoView() <- 괄호안에 원하는 셀렉터를 주면 된다.
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
 
 
 
