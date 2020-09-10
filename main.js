@@ -21,15 +21,18 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
+    scrollIntoView(link);
 })
 
 // Handle click on "contact me" button on home
-
 const contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click', (event) => {
-    const scrollTo = document.querySelector('#contact');
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
+contactMe.addEventListener('click', () => {
+    scrollIntoView('#contact');
 });
 
+// 중복되는 스크롤 코드가 있기에 스크롤 함수를 하나 만들었다.
+// (selector)를 넣어주면 scrollIntoView() <- 괄호안에 원하는 셀렉터를 주면 된다.
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
