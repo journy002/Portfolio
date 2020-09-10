@@ -401,7 +401,7 @@ h3{
 }
 
 .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 /* title과 설명들에 선 넣기 */
@@ -410,9 +410,9 @@ h3{
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 53px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -516,13 +516,20 @@ h3{
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-light-grey);
     }
-
+    #navbar.navbar--dark {
+        padding: 16px;
+    }
     .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors {
