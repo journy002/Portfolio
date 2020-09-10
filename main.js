@@ -62,6 +62,15 @@ workBtnContainer.addEventListener('click', (e) => {
     if (filter == null) {
         return;
     }
+
+    // Remove selection from the previous item and select the new one
+    // work부분에서 새로 클릭된 부분(ex.front-end,react,javascipt)을 선택했을때
+    // 그 부분에 색깔이 가면서 포커스가 맞춰지게 하기
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => {
