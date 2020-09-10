@@ -30,6 +30,18 @@ contactMe.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
 
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height //높이 구하기
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
 // 중복되는 스크롤 코드가 있기에 스크롤 함수를 하나 만들었다.
 // (selector)를 넣어주면 scrollIntoView() <- 괄호안에 원하는 셀렉터를 주면 된다.
 function scrollIntoView(selector) {
