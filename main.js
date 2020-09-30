@@ -21,11 +21,12 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    // remove('open')을 scrollIntoView()위에 써서 핸드폰 사이즈 메뉴바로 메뉴 선택시 선택 영역으로 스크롤링 되면서 메뉴는 사라지게 만든다.
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
 })
 
-// navbar menu slide down
+// Navbar toggle button for small screen
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
@@ -87,8 +88,6 @@ workBtnContainer.addEventListener('click', (e) => {
             } else {
                 project.classList.add('invisible');
             }
-
-
         });
         projectContainer.classList.remove('anim-out');
     }, 300)
