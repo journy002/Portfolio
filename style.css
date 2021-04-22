@@ -192,6 +192,14 @@ h3{
     margin: auto;
 }
 
+/* section-about-me */
+.section-about-me p{
+    color: #222222;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+}
+
 /* About major */
 .about__majors {
     display: flex;
