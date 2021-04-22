@@ -344,20 +344,18 @@ h3{
     top: 6px;
 }
 .category__count {
-    background-color: var(--color-orange);
-    border-radius: 50%;
-    color: var(--color-white);
+    display: inline-block;
     width: 24px;
     height: 24px;
-    /* span은 컨텐츠를 꽉 감싸주는 사이즈로 정해지기 때문에 원이 이쁘지않다
-        그럴때 display:inline-block으로 변경해주면 좋다. */
-    display: inline-block;
-    line-height: 24px;
-    /* 숫자를 안보였다 마우스 올리면 보이게 하기 */
     position: absolute;
     top: -20px;
     right: 16px;
+    font-size: 16px;
+    border-radius: 50px;
+    line-height: 24px;
     opacity: 0;
+    background-color: var(--color-orange);
+    color: var(--color-white);
     transition: all var(--animation-duration) ease-in;
 }
 
