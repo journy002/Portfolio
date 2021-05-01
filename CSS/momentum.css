@@ -1,0 +1,18 @@
+body,p,span,h1,h2,a{margin: 0;padding: 0;list-style: none;}
+body{ background-color: #eee;}
+.inner-wrap{display: flex;flex-direction: column;justify-content: center;height: 100vh;}
+.inner-wrap .inner-box{margin: 0 auto;text-align: center;}
+.inner-wrap .inner-box h1,
+.inner-wrap .inner-box h2{color: #fff;}
+.inner-wrap .inner-box .js-form input{padding: 10px;width: 100%;border: 2px solid #d6deed;border-radius: 6px;outline: none;color: #8c8686;box-sizing: border-box;}
+.inner-wrap .inner-box .js-gretting{position: absolute;top: 10px;right: 42px;margin: 10px 0;color: #fff;font-size: 24px;}
+.inner-wrap .inner-box .js-todoList{padding-left: 10px;width: 100%;box-sizing: border-box;}
+.inner-wrap .inner-box .js-todoList li{display: flex;justify-content: space-between;list-style: none;margin-bottom: 10px;color: #fff;}
+.inner-wrap .inner-box .js-todoList li span{padding-right: 10px;}
+.inner-wrap .inner-box .js-todoForm{position: relative;margin-top: 10px;}
+.inner-wrap .inner-box .js-todoForm input{padding: 10px;width: 100%;border: 2px solid skyblue;border-radius: 6px;outline: none;color: #8c8686;box-sizing: border-box;}
+.inner-wrap .inner-box .js-todoForm button{position: absolute;top: 9px;right: 12px;}
+.form,
+.gretting{display: none;}
+.showing{display: block;margin: 20px 0;}
+.bgImage{position: absolute;width: 100%;height: 100%;top: 0;bottom: 0;left: 0;right: 0;z-index: -1;}
