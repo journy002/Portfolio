@@ -200,6 +200,16 @@ h3{
     text-align: left;
 }
 
+.section-about-me p span{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.section-about-me p span + span{
+    margin-top: 10px;
+}
+
 /* About major */
 .about__majors {
     display: flex;
