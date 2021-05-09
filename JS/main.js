@@ -26,7 +26,7 @@ navbarMenu.addEventListener('click', (event) => {
     scrollIntoView(link);
 })
 
-// Navbar toggle button for small screen
+// Navbar toggle button for small screen 핸드폰 사이즈에서 메뉴버튼 눌렀을때 하단에 메뉴 리스트 나타내기
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
@@ -73,8 +73,7 @@ workBtnContainer.addEventListener('click', (e) => {
     }
 
     // Remove selection from the previous item and select the new one
-    // work부분에서 새로 클릭된 부분(ex.front-end,react,javascipt)을 선택했을때
-    // 그 부분에 색깔이 가면서 포커스가 맞춰지게 하기
+    // work부분에서 새로 버튼 클릭시 (ex.mysuni,visang ...) 포커스 맞추기
     const active = document.querySelector('.category__btn.selected');
     active.classList.remove('selected');
     const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
@@ -107,7 +106,7 @@ workBtnContainer.addEventListener('click', (e) => {
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
+};
 
 
 
