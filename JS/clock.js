@@ -13,7 +13,7 @@ function loadClock(){
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
-    h1.innerText = `${month + 1}월${clockDate}일${week[day]}일`;
+    h1.innerText = `${month + 1}월${clockDate}${week[day]}`;
     h2.innerText = `${hours < 10 ? `0${hours}`:hours}:${minutes < 10 ? `0${minutes}`:minutes}:${seconds < 10 ? `0${seconds}`:seconds}`
 }
 
